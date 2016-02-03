@@ -29,12 +29,11 @@ build:
     - ls -al
 
   post_ci:
-    - docker tag -f shippabledocker/shiphitchcock1_sample_node:latest shippabledocker/shiphitchcock1_sample_node_3feb04
-    - docker tag -f quay.io/shippablequay/shiphitchcock1_sample_node quay.io/shippabledocker/shiphitchcock1_sample_node_3feb05
-    - docker push shippabledocker/shiphitchcock1_sample_node_3feb04
-    - docker push quay.io/shippablequay/shiphitchcock1_sample_node_3feb05
-   # - docker push shippabledocker/shiphitchcock1_sample_node_3feb06
-    
+    - docker tag -f shippabledocker/shiphitchcock1_sample_node:latest shippabledocker/shiphitchcock1_sample_node_3feb15
+    - docker tag -f quay.io/shippablequay/shiphitchcock1_sample_node quay.io/shippablequay/shiphitchcock1_sample_node_3feb01
+    - docker push shippabledocker/shiphitchcock1_sample_node_3feb15
+    - docker push quay.io/shippablequay/shiphitchcock1_sample_node_3feb01
+   
 integrations:
   hub:
     - integrationName: ship-docker
