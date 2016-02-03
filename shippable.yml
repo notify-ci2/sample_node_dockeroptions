@@ -27,13 +27,13 @@ build:
     - ls -al
 
   post_ci:
-    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb01
-    - docker tag -f gcr.io/shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb02
-    - docker tag -f quay.io/shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb03
-  #  - docker tag -f drydock/u14nod:prod shippabledocker/shiphitchcock1_sample_node_3feb03
-    - docker push shippabledocker/shiphitchcock1_sample_node_3feb01
-    - docker push gcr.io/shippabledocker/shiphitchcock1_sample_node_3feb02
-    - docker push quay.io/shippabledocker/shiphitchcock1_sample_node_3feb03
+    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb17
+    
+    - docker tag -f quay.io/shippablequay/shiphitchcock1_sample_node shippablequay/shiphitchcock1_sample_node_3feb02
+
+    - docker push shippabledocker/shiphitchcock1_sample_node_3feb17
+
+    - docker push quay.io/shippablequay/shiphitchcock1_sample_node_3feb02
     
 integrations:
   hub:
@@ -41,6 +41,4 @@ integrations:
       type: docker
     - integrationName: ship-quay
       type: quay
-    - integrationName: ship-gcr
-      type: gcr
       
