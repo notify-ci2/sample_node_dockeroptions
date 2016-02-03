@@ -27,13 +27,13 @@ build:
     - ls -al
 
   post_ci:
-    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb07
-    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb08
-    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb09
+    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb10
+    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb11
+    - docker tag -f shippabledocker/shiphitchcock1_sample_node shippabledocker/shiphitchcock1_sample_node_3feb12
   #  - docker tag -f drydock/u14nod:prod shippabledocker/shiphitchcock1_sample_node_3feb03
-    - docker push shippabledocker/shiphitchcock1_sample_node_3feb07
-    - docker push shippabledocker/shiphitchcock1_sample_node_3feb08
-    - docker push shippabledocker/shiphitchcock1_sample_node_3feb09
+    - docker push shippabledocker/shiphitchcock1_sample_node_3feb10
+    - docker push shippabledocker/shiphitchcock1_sample_node_3feb11
+    - docker push shippabledocker/shiphitchcock1_sample_node_3feb12
     
 integrations:
   hub:
