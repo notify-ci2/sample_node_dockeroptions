@@ -16,27 +16,27 @@ build:
  # pre_ci:
   #  - docker build -t=shippabledocker/shiphitchcock1_sample_node .
 
-  pre_ci_boot:
-    image_name: 
-      - shippabledocker/shiphitchcock1_sample_node
-      - quay.io/shippablequay/shiphitchcock1_sample_node
-    image_tag: latest
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  #pre_ci_boot:
+    #image_name: 
+     # - shippabledocker/shiphitchcock1_sample_node
+      #- quay.io/shippablequay/shiphitchcock1_sample_node
+  #  image_tag: latest
+   # pull: true
+    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
-    - ls -al
+    - ls -al CVF
 
-  post_ci:
-    - docker tag -f shippabledocker/shiphitchcock1_sample_node:latest shippabledocker/shiphitchcock1_sample_node_3feb15
-    - docker tag -f quay.io/shippablequay/shiphitchcock1_sample_node quay.io/shippablequay/shiphitchcock1_sample_node_3feb01
-    - docker push shippabledocker/shiphitchcock1_sample_node_3feb15
-    - docker push quay.io/shippablequay/shiphitchcock1_sample_node_3feb01
+  #post_ci:
+    #- docker tag -f shippabledocker/shiphitchcock1_sample_node:latest shippabledocker/shiphitchcock1_sample_node_3feb15
+    #- docker tag -f quay.io/shippablequay/shiphitchcock1_sample_node quay.io/shippablequay/shiphitchcock1_sample_node_3feb01
+   # - docker push shippabledocker/shiphitchcock1_sample_node_3feb15
+  #  - docker push quay.io/shippablequay/shiphitchcock1_sample_node_3feb01
    
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-    - integrationName: ship-quay
-      type: quay
+#integrations:
+#hub:
+ #   - integrationName: ship-docker
+  #    type: docker
+   # - integrationName: ship-quay
+    #  type: quay
