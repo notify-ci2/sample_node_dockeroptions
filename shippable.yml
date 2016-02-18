@@ -27,8 +27,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=gcr.io/varsha-project/gcrpreci18feb-ghcustomnode:latest .
-    - docker push gcr.io/varsha-project/gcrpreci18feb-ghcustomnode12:latest
+    - docker build -t=gcr.io/varsha-project/gcrpreci18feb-ghcustomnode:new .
+    - docker push gcr.io/varsha-project/gcrpreci18feb-ghcustomnode:latest
 
 integrations:
   hub:
