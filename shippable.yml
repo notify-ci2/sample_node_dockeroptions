@@ -26,8 +26,8 @@ build:
     - ps -eax
     - ls -al
 
-  post_ci:
-    - docker push gcr.io/varsha-project/gcrpreci18feb-ghcustomnode
+ # post_ci:
+  #  - docker push gcr.io/varsha-project/gcrpreci18feb-ghcustomnode
 
 integrations:
   hub:
