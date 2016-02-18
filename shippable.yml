@@ -17,8 +17,8 @@ build:
    # - docker build -t=gcr.io/varsha-project/gcrpreci18feb-ghcustomnode .
 
   pre_ci_boot:
-    image_name: gcr.io/varsha-project/gcrpreci17feb
-    image_tag: latest
+    image_name: drydock/u12nod #gcr.io/varsha-project/gcrpreci17feb
+    image_tag: prod
     pull: true
     #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
@@ -27,8 +27,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=gcr.io/varsha-project/gcrpreci18feb-ghcustomnode .
-    - docker push gcr.io/varsha-project/gcrpreci18feb-ghcustomnode
+    - docker build -t=gcr.io/varsha-project/gcrpreci18feb-ghcustomnode:latest .
+    - docker push gcr.io/varsha-project/gcrpreci18feb-ghcustomnode12:latest
 
 integrations:
   hub:
