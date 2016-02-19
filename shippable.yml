@@ -13,13 +13,13 @@ env:
     - M1=ONE
 
 build:
- # pre_ci:
-  #  - docker build -t=shippabledocker/shiphitchcock1_sample_node .
+  pre_ci:
+    - docker build -t=shippabledocker/shiphitchcock1_sample_node19feb .
 
   pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock1_sample_node
+    image_name: shippabledocker/shiphitchcock1_sample_node19feb
     image_tag: latest
-    pull: true
+    pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
@@ -27,8 +27,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_sample_node18feb:latest .
-    - docker push shippabledocker/shiphitchcock1_sample_node18feb:latest
+  #  - docker build -t=shippabledocker/shiphitchcock1_sample_node18feb:latest .
+    - docker push shippabledocker/shiphitchcock1_sample_node19feb:latest
 
 integrations:
   hub:
